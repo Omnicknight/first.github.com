@@ -1,2 +1,2 @@
-# first.github.com
+# first.github.io
 первый тест
