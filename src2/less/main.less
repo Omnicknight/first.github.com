@@ -70,6 +70,12 @@ section {
 		background-color: darken(@btn-color, 5%);
 	}
 }
+.section-header {
+	margin: 4rem 0 13rem;
+	font-size: 3.6rem;
+	.bold();
+	text-align: center;
+}
 
 /* main */
 .main {
@@ -190,22 +196,77 @@ section {
 		text-align: right;
 	}
 }
+
+// оформление секции с преимуществами
+.features {
+	&-block {
+		text-align: center;
+		h3 {
+			font-size: 2rem;
+			.bold();
+			margin-bottom: 3.5rem;
+		}
+		p {
+			display: inline-block;
+			width: 80%;
+			font-size: 1.4rem;
+			a{
+				color: @icons-color;
+			}
+		}
+	}
+	&-img {
+		height: 12rem;
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+}
+.slick-active{
+	outline: none;
+}
+.arrow {
+	position: absolute;
+	top: 50%;
+	width: 3rem;
+	height: 3rem;
+	border: none;
+	z-index: 99;
+	transform: scaleY(-50%);
+}
+.prev {
+	left: 0;
+	background-size: 70%;
+	background: url(../img/features/left-arrow.svg) center no-repeat;
+}
+.next {
+	right: 0;
+	background-size: 70%;
+	background: url(../img/features/right-arrow.svg) center no-repeat;
+}
 @media (max-width: 1201px) {
+	.main {
+		background-position: top right;
+	}
 	.phone-block{
 		text-align: center;
 	}
 	.main-content {
 		text-align: center;
 	}
+}
+@media (max-width: 769px) {
+	.main {
+		background-position: top left;
+	}
+	.main-content {
+		margin-top: 15rem;
+	}
 	.logo {
 		text-align: center;
 	}
 	.wrap-block {
 		text-align: center;
-	}
-}
-@media (max-width: 769px) {
-	.main-content {
-		margin-top: 15rem;
 	}
 }
