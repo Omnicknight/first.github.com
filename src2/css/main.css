@@ -23,7 +23,8 @@ a:hover {
 }
 button:focus,
 input:focus,
-a:focus {
+a:focus,
+textarea:focus {
   outline: none;
 }
 body {
@@ -113,6 +114,7 @@ section {
   padding: 1.5rem;
   margin-bottom: 2.3rem;
   border: 1px solid #dddddd;
+  border-radius: 5px;
 }
 .main-form label {
   position: absolute;
@@ -202,6 +204,52 @@ section {
   right: 0;
   background-size: 70%;
   background: url(../img/features/right-arrow.svg) center no-repeat;
+}
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.popup-content {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10%;
+  background-color: white;
+  padding: 4rem 5rem;
+  text-align: center;
+}
+.popup-content p {
+  font-size: 1.6rem;
+}
+.popup-form {
+  margin-top: 3rem;
+  padding: 0;
+}
+.popup-form textarea {
+  height: 9.1rem;
+}
+.popup-close {
+  position: absolute;
+  top: -1.6rem;
+  right: -2rem;
+  width: 2rem;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  font-size: 3rem;
+  color: #ffffff;
+}
+.popup-header {
+  font-family: 'ProximaNova_bold', sans-serif;
+  font-size: 1.6rem;
 }
 @media (max-width: 1201px) {
   .main {
